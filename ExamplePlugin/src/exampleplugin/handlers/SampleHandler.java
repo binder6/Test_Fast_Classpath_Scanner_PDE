@@ -34,7 +34,15 @@ public class SampleHandler extends AbstractHandler {
 				window.getShell(),
 				"ExamplePlugin",
 				"Hello, Eclipse world");
-		FastClasspathScanner scanner = new FastClasspathScanner("mypack.core").verbose();
+//      When scanning the classes of the project itself, the scanner can get the classes of a given package.
+//		FastClasspathScanner scanner = new FastClasspathScanner("mypack.core").verbose();
+//		List<String> classNames = scanner.scan().getNamesOfAllClasses();
+//		for (String name : classNames) {
+//			System.out.println("The class: " + name);
+//		}
+		
+		// When scanning the classes of the jars of plug-in dependencies, the scanner cannot get the classes of a given package.
+		FastClasspathScanner scanner = new FastClasspathScanner("org.eclipse.swt.accessibility").verbose();
 		List<String> classNames = scanner.scan().getNamesOfAllClasses();
 		for (String name : classNames) {
 			System.out.println("The class: " + name);

@@ -6,6 +6,6 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: exampleplugin.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- fast-classpath-scanner-latest;bundle-version="1.0.0"
+ fast-classpath-scanner;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
